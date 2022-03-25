@@ -116,7 +116,7 @@ a {text-decoration: none}
     width:25rem;
     height:4rem;
     background-color:rgba(26,26,26,0.6);
-    border:2px solid rgba(252, 58, 74);
+    border:2px solid rgb(189, 29, 43);
     border-radius:2px;
     color: rgba(255, 255, 255, 0.7);
     font-size:2rem;
@@ -134,7 +134,7 @@ a {text-decoration: none}
     width:25rem;
     height:4rem;
     border-radius:3px;
-    border:2px solid rgba(252, 58, 74);
+    border:2px solid rgb(189, 29, 43);
     filter:blur(0);
     transform-origin:50%;
     z-index:-1;
@@ -188,6 +188,13 @@ a {text-decoration: none}
 }
 
 @media (max-width: 460px) {
+    .profilePic {
+        height: 250px;
+        margin-top: 3rem;
+    }
+
+    .profilePic-img {backdrop-filter: saturate(10%)}
+
     .button{
         width:9rem;
         height:2.8rem;
