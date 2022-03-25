@@ -189,8 +189,8 @@ a {text-decoration: none}
 
 @media (max-width: 460px) {
     .profilePic {
-        height: 250px;
-        margin-top: 3rem;
+        height: 220px;
+        margin-top: 2.5rem;
     }
 
     .profilePic-img {backdrop-filter: saturate(10%)}
