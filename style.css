@@ -51,7 +51,6 @@ table {
 
 *, *:before, *:after {box-sizing:border-box}
 
-
 /* ============================== STYLING ============================== */
 
 
@@ -67,21 +66,61 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(243, 244, 246, 1);
+}
+
+#wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    perspective: 1000px;
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    padding: 1.5em;
+    z-index: 2;
+}
+
+#wrapper:before {
+    content: '';
+    display: block;
+}
+
+#wrapper > * {
+    z-index: 1;
+}
+
+/* ==================== Main ==================== */
+
+.main {
+    position: relative;
+    max-width: 100%;
+    min-width: 50em;
+    padding: 3em;
+    background: rgb(5, 0, 5, 0.8);
+    border-radius: 4px;
+    cursor: default;
+    text-align: center;
 }
 
 .profilePic {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 300px;
-    margin-top: 5rem;
+    position: relative;
+    display: block;
+    margin-bottom: 1.5rem;
 }
 
 .profilePic-img {
-    border-radius: 50%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    display: block;
+    border-radius: 6px;
+    width: 30%;
+    margin: 0 auto;
+    border: 3px solid rgb(189, 29, 43, 0.5);
     animation: moveInLeft 1s;
 }
 
@@ -92,16 +131,44 @@ body {
     }
 }
 
+h1 {
+    font-size: 1.85em;
+    letter-spacing: 0.22em;
+    margin: 0 0 0.525em 0;
+    color: rgba(243, 244, 246, 1);
+}
+
+.header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header a:hover {
+    color: rgb(189, 29, 43);
+}
+
+@keyframes color {
+    100% {color: rgb(189, 29, 43)};
+}
+
+h1, .header p, .header a, h2 {
+    animation: fadeIn linear 2s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+
+/* ==================== LINKS ==================== */
+
 .socialLinks {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
     gap: 15px;
-}
-
-.socialMedia1 {
-    padding-left:15px;
 }
 
 a {text-decoration: none}
@@ -113,13 +180,13 @@ a {text-decoration: none}
     justify-content: center;
     margin-top:2.4rem;
     padding:0.8rem 3rem;
-    width:25rem;
-    height:4rem;
+    width:15rem;
+    height:2.5rem;
     background-color:rgba(26,26,26,0.6);
     border:2px solid rgb(189, 29, 43);
     border-radius:2px;
     color: rgba(255, 255, 255, 0.7);
-    font-size:2rem;
+    font-size:1rem;
     font-weight:500;
     cursor:pointer;
     animation:moveInBottom 0.7s 1.2s;
@@ -131,8 +198,8 @@ a {text-decoration: none}
     content:'';
     position:absolute;
     top:-2px;left:-2px;
-    width:25rem;
-    height:4rem;
+    width:15rem;
+    height:2.5rem;
     border-radius:3px;
     border:2px solid rgb(189, 29, 43);
     filter:blur(0);
@@ -161,44 +228,75 @@ a {text-decoration: none}
     100%{opacity:1;transform:translateY(0)}
 }
 
+/* ====================== FOOTER ====================== */
+
+
+/* ====================== MEDIA QUERIES ====================== */
+
 @media (max-width: 950px) {
+    .main {min-width: 20em}
+    
     .button{
-        width:20rem;
-        height:3.5rem;
-        font-size:1.8rem;
+        width:12rem;
+        height:2.8rem;
+        font-size:1rem;
     }
     
     .button:before,.button:after{
-        width:20rem;
-        height:3.5rem;
+        width:12rem;
+        height:2.8rem;
+    }
+
+    .socialLinks {
+        gap: 10px;
     }
 }
 
 @media (max-width: 700px) {
+    .main {min-width: 15em}
+
     .button{
-        width:12rem;
-        height:2.8rem;
-        font-size:1.2rem;
+        width:10rem;
+        height:2rem;
+        font-size:0.8rem;
     }
     
     .button:before,.button:after{
-        width:12rem;
-        height:2.8rem;
+        width:10rem;
+        height:2rem;
+    }
+}
+
+@media (max-width: 570px) {
+    .main {min-width: 10em}
+
+    .button{
+        width:10rem;
+        height:2rem;
+        font-size:0.8rem;
+    }
+    
+    .button:before,.button:after{
+        width:10rem;
+        height:2rem;
     }
 }
 
 @media (max-width: 460px) {
-    .profilePic {
-        height: 220px;
-        margin-top: 2.5rem;
-    }
-
     .profilePic-img {backdrop-filter: saturate(10%)}
+
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .header p, .header a, h2 {
+        font-size: 0.8em;
+    }
 
     .button{
         width:9rem;
         height:2.8rem;
-        font-size:1.2rem;
+        font-size:0.8rem;
     }
     
     .button:before,.button:after{
@@ -207,11 +305,19 @@ a {text-decoration: none}
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1em;
+    }
+    
+    .header p, .header a, h2 {
+        font-size: 0.8em;
+    }
+    
     .button{
         width:8rem;
         height:2.5rem;
-        font-size:1.1rem;
+        font-size:0.8rem;
     }
     
     .button:before,.button:after{
