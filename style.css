@@ -77,8 +77,8 @@ body {
 #wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
     perspective: 1000px;
     position: relative;
     min-height: 100%;
@@ -230,6 +230,10 @@ a {text-decoration: none}
 
 /* ====================== FOOTER ====================== */
 
+#footer {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
 
 /* ====================== MEDIA QUERIES ====================== */
 
@@ -283,10 +287,16 @@ a {text-decoration: none}
 }
 
 @media (max-width: 460px) {
-    .profilePic-img {backdrop-filter: saturate(10%)}
+    .main {
+        padding: 2em;    
+    }
+
+    .profilePic {
+        margin-bottom: 1rem;
+    }
 
     h1 {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     
     .header p, .header a, h2 {
@@ -297,31 +307,57 @@ a {text-decoration: none}
         width:9rem;
         height:2.8rem;
         font-size:0.8rem;
+        margin-top: 1.5rem;
     }
     
     .button:before,.button:after{
         width:9rem;
         height:2.8rem;
+    }
+
+    #footer {
+        font-size: 0.8em;
     }
 }
 
 @media (max-width: 400px) {
+    .main {
+        padding: 1.5em;    
+    }
+
+    .profilePic {
+        margin-bottom: 1rem;
+    }
+
     h1 {
         font-size: 1em;
     }
     
-    .header p, .header a, h2 {
+    .header p {
         font-size: 0.8em;
+    }
+
+    .header a {
+        font-size: 0.6em;
+    }
+
+    h2 {
+        font-size: 0.7em;
     }
     
     .button{
         width:8rem;
         height:2.5rem;
         font-size:0.8rem;
+        margin-top: 1.5rem;
     }
     
     .button:before,.button:after{
         width:8rem;
         height:2.5rem;
+    }
+
+    #footer {
+        font-size: 0.8em;
     }
 }
