@@ -12,7 +12,6 @@ This website provides quick and easy access to my social media links. I built th
 **Tech used:** HTML, CSS
 
 ## Optimizations
-*(optional)*
 
 Responsive to most screen sizes.
 
