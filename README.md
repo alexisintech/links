@@ -3,7 +3,7 @@ This website provides quick and easy access to my social media links. I built th
 
 <div align="center">
   <a href="https://alexisintech.github.io/socialLinks/" target=_blank>
-    <img src="socialLinks.gif"/>
+    <img src="socialLinks.gif" height="100%" />
   </a>
 </div>
 
