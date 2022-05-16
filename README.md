@@ -1,7 +1,7 @@
 # [Social Links](https://alexisintech.github.io/socialLinks/)
 This website provides quick and easy access to my social media links. I built this as an alternative to a link tree as link tree limits certain links and also, link tree offers limited creative freedom.
 
-<div align="center">
+<div>
   <a href="https://alexisintech.github.io/socialLinks/" target=_blank>
     <img src="socialLinks.gif" height="100%" />
   </a>
