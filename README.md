@@ -10,6 +10,7 @@ This website provides quick and easy access to my social media links. I built th
 ## How It's Made:
 
 **Tech used:** HTML, CSS
+[source for bg.jpeg](https://wallpaperaccess.com/red-binary-code)
 
 ## Optimizations
 
