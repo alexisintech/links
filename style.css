@@ -320,7 +320,7 @@ a {text-decoration: none}
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 374px) {
     .main {
         padding: 1.5em;    
     }
