@@ -109,7 +109,7 @@ body {
     text-align: center;
 }
 
-.profilePic {
+.profile-pic {
     position: relative;
     display: block;
     margin-bottom: 1.5rem;
@@ -291,7 +291,7 @@ a {text-decoration: none}
         padding: 2em;    
     }
 
-    .profilePic {
+    .profile-pic {
         margin-bottom: 1rem;
     }
 
@@ -321,29 +321,19 @@ a {text-decoration: none}
 }
 
 @media (max-width: 374px) {
-    .main {
-        padding: 1.5em;    
-    }
+    .main {padding: 1.5em;    }
 
-    .profilePic {
-        margin-bottom: 1rem;
-    }
+    .profile-pic {margin-bottom: 1rem;}
 
     h1 {
         font-size: 1em;
     }
     
-    .header p {
-        font-size: 0.8em;
-    }
+    .header h2 {font-size: 0.8em;}
 
-    .header a {
-        font-size: 0.6em;
-    }
+    .header p {font-size: 0.6rem;}
 
-    h2 {
-        font-size: 0.7em;
-    }
+    .header a {font-size: 0.6em;}
     
     .button{
         width:8rem;
@@ -357,7 +347,5 @@ a {text-decoration: none}
         height:2.5rem;
     }
 
-    #footer {
-        font-size: 0.8em;
-    }
+    #footer {font-size: 0.8em;}
 }
