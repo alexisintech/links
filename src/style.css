@@ -32,8 +32,16 @@
 }
 
 .app {
-	background-image:url("../src/assets/bg.svg")
+	background-image:url("../src/assets/bg.svg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100%;
 }
+	@media all and (max-width:600px){
+		.app{
+			background-image:none;
+		}
+	}
 
 .button{
 	position:relative;
