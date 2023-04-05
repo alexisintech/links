@@ -57,11 +57,11 @@ table {
 body {
     width: 100vw;
     height: 100vh;
-    background-color:rgba(26,26,26,0.6);
-    backdrop-filter: blur(1.5px);
-    background-image: url("bg.jpg");
+    background-color:black;
+    /* backdrop-filter: blur(1.5px); */
+    /* background-image: url("bg.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     display: flex; 
     flex-direction: column;
     justify-content: flex-start;
@@ -78,7 +78,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
     perspective: 1000px;
     position: relative;
     min-height: 100%;
@@ -103,7 +102,7 @@ body {
     max-width: 100%;
     min-width: 50em;
     padding: 3em;
-    background: rgb(5, 0, 5, 0.8);
+    /* background: #151515; */
     border-radius: 4px;
     cursor: default;
     text-align: center;
@@ -228,13 +227,6 @@ a {text-decoration: none}
     0%{opacity:0;transform:translateY(4rem)
     }
     100%{opacity:1;transform:translateY(0)}
-}
-
-/* ====================== FOOTER ====================== */
-
-#footer {
-    margin-top: 10px;
-    color: rgba(255, 255, 255, 0.7);
 }
 
 /* ====================== MEDIA QUERIES ====================== */
