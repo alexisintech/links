@@ -30,3 +30,59 @@
     font-family: "Centra", sans-serif;
   }
 }
+
+.app {
+	background-image:url("../src/assets/bg.svg")
+}
+
+.button{
+	position:relative;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	padding:1.5rem 3rem;
+	width:15rem;
+	height:2.5rem;
+	background-color:rgba(0,0,0,0.6);
+	border:2px solid rgb(189, 29, 43);
+	border-radius:2px;
+	color: rgba(255, 255, 255, 0.7);
+	cursor:pointer;
+	animation:moveInBottom 0.7s 1.2s;
+	animation-fill-mode:backwards;
+	animation-timing-function:cubic-bezier(0.21, 1.11, 0.81, 0.99)
+}
+
+.button:before,.button:after{
+	content:'';
+	position:absolute;
+	padding:1.5rem 3rem;
+	width:15rem;
+	height:2.5rem;
+	border-radius:3px;
+	border:2px solid rgb(189, 29, 43);
+	filter:blur(0);
+	transform-origin:50%;
+	z-index:-1;
+}
+
+.button:hover{
+	transform:translateY(-2px)}
+	
+.button:hover:before,.button:hover:after{
+	border-color:transparent;
+	filter:blur(2px);
+	transform:scaleX(1.3) scaleY(2.2);
+	transition:800ms transform ease, 1900ms blur ease, 700ms border-color ease;
+	pointer-events:none
+}
+
+.button:hover:after{transition-delay:150ms}
+
+.button:active{transform:translateY(-1px)}
+
+@keyframes moveInBottom{
+	0%{opacity:0;transform:translateY(4rem)
+	}
+	100%{opacity:1;transform:translateY(0)}
+}

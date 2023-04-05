@@ -2,7 +2,7 @@ const Link = ({ title, to }) => {
   return (
     <div>
       <a href={to} target="_blank">
-        <div class="button">{title}</div>
+        <div class="button text-lg">{title}</div>
       </a>
     </div>
   );
