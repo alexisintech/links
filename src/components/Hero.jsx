@@ -1,4 +1,4 @@
-import avatar from "../assets/avatar.jpg";
+import avatar from "../assets/avatar.webp";
 
 const Hero = () => {
   return (
