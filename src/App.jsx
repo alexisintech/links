@@ -4,8 +4,8 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="app h-screen bg-black text-white">
-      <div className="container mx-auto flex flex-col items-center text-center">
+    <div className="app min-h-screen bg-black text-white">
+      <div className="container mx-auto flex min-h-screen flex-col items-center text-center">
         <Hero />
         <Links />
         <Footer />
